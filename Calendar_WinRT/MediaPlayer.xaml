@@ -1,12 +1,11 @@
 ﻿<Page
-    x:Class="Calendar_WinRT.MediaPlayer.MediaPlayer"
+    x:Class="Calendar_WinRT.MediaPlay.MediaPlayer"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Calendar_WinRT.MediaPlayer"
+    xmlns:local="using:MediaPlayer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <Page.TopAppBar>
         <CommandBar>
             <CommandBar.SecondaryCommands>
@@ -18,7 +17,6 @@
             <AppBarButton Icon="OpenPane" Click="openPanel"/>
         </CommandBar>
     </Page.TopAppBar>
-    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid x:Name="grBackGround">
             <Slider x:Name="slTime" HorizontalAlignment="Left" Margin="318,440,0,0" VerticalAlignment="Top" Width="741" Height="41"/>

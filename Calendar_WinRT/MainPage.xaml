@@ -6,13 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.TopAppBar>
-        <CommandBar>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="commandBarShared">
             <AppBarButton x:Name="toPeriod" Icon="Calendar" Label="Period" Click="toPeriod_Click"/>
             <AppBarButton x:Name="toXoSo" Icon="CalendarDay" Label="Xổ số" Click="toXoSo_Click"/>
             <AppBarButton x:Name="toMusic" Icon="MusicInfo" Label="Music" Click="toMusic_Click"/>
         </CommandBar>
-    </Page.TopAppBar>
+    </Page.BottomAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         

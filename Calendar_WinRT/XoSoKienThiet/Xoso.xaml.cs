@@ -128,5 +128,11 @@ namespace Calendar_WinRT.XoSoKienThiet
                 await ms.ShowAsync();
             }
         }
+
+        private void back_Click(object sender, RoutedEventArgs e) {
+            if (this.Frame != null) {
+                this.Frame.Navigate(typeof(MainPage));
+            }
+        }
     }
 }

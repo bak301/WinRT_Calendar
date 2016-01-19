@@ -34,7 +34,7 @@ namespace Calendar_WinRT.Period
         public PeriodPage()
         {
             this.InitializeComponent();
-            period = new GirlPeriod("tester");
+            period = new GirlPeriod();
             firstDayPicker.Value = Convert.ToDateTime("01/18/2016");
             nextDayPicker.Value = Convert.ToDateTime("02/18/2016");
         }
@@ -58,6 +58,12 @@ namespace Calendar_WinRT.Period
             mainCalendar.MoveToDate(lastRange.StartDate.AddTicks((lastRange.EndDate.Ticks - lastRange.StartDate.Ticks) / 2));
             mainCalendar.CellStateSelector = new DangerDayCellStateSelector(period.listDangerDate);
             mainCalendar.CellStyleSelector = new DangerDayCellStyleSelector(period.listDangerDate, period.listBloodDay);
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e) {
+            if (this.Frame != null) {
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
     }
 }

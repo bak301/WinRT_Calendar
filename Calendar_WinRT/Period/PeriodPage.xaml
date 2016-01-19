@@ -8,6 +8,14 @@
     xmlns:tlk="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Back" Click="back_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
     <Grid x:Name="mainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.Resources>
             <tlk:CalendarCellStyle x:Key="CustomNormalCellStyle">
@@ -108,9 +116,7 @@
             <tlk:RadDatePicker x:Name="nextDayPicker" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"></tlk:RadDatePicker>
 
             <StackPanel Grid.Column="1" Grid.Row="3">
-                <TextBlock x:Name="txtFirstDay" FontSize="30" Text="Yolo"></TextBlock>
-                <TextBlock x:Name="txtLastDay" FontSize="30" Text="Olo"></TextBlock>
-                <TextBlock x:Name="txtCurrentSelection" FontSize="30"></TextBlock>
+                <TextBlock x:Name="txtFirstDay" FontSize="30"></TextBlock>
             </StackPanel>
             <Button Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" FontSize="50" x:Name="btnInitializeGirlPeriod" Content="Bắt đầu" Click="btnInitializeGirlPeriod_Click"></Button>
         </Grid>

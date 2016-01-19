@@ -32,7 +32,6 @@ namespace Calendar_WinRT.MediaPlayer
     public sealed partial class MediaPlayer : Page
     {
         private Boolean online = true;
-
         public MediaPlayer()
         {
 
@@ -230,7 +229,8 @@ namespace Calendar_WinRT.MediaPlayer
 
 
         private void turnUpVol(object sender, RoutedEventArgs e)
-        {                
+        {     
+            
             if (myMedia.Volume < 1)
             {
                 myMedia.Volume = myMedia.Volume + 0.1;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MediaPlayer
+namespace Calendar_WinRT.MediaPlay
 {
     public class Musics
     {
@@ -17,6 +17,6 @@ namespace MediaPlayer
         public string UrlSource { set; get; }
         public string SiteId { set; get; }
         public string HostName { set; get; }
-        
+        public string Name { set; get; }
     }
 }

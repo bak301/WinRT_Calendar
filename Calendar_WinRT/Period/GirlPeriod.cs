@@ -9,12 +9,9 @@ using Telerik.UI.Xaml.Controls.Input;
 namespace Calendar_WinRT.Period {
     class GirlPeriod {
         public ObservableCollection<DateTime> listBloodDay { get; set; }
-        public string ten { get; set; }
         public List<CalendarDateRange> listDangerDate { get; set; }
-        public int chuky { get; set; }
 
-        public GirlPeriod(string ten) {
-            this.ten = ten;
+        public GirlPeriod() {
             listDangerDate = new List<CalendarDateRange>();
             listBloodDay = new ObservableCollection<DateTime>();
             listBloodDay.CollectionChanged += ArrNgayKinh_CollectionChanged;
@@ -28,7 +25,8 @@ namespace Calendar_WinRT.Period {
 
         private void buildDangerWeek() {
             int lastDay = listBloodDay.Count-1;
-            listDangerDate.Add(getTuanNguyHiem(listBloodDay[lastDay-1], listBloodDay[lastDay]));
+            CalendarDateRange dangerRange = getTuanNguyHiem(listBloodDay[lastDay - 1], listBloodDay[lastDay]);
+            listDangerDate.Add(dangerRange);
         }
 
         private CalendarDateRange getTuanNguyHiem(DateTime firstDay, DateTime nextDay) {
@@ -38,9 +36,9 @@ namespace Calendar_WinRT.Period {
             return temp;
         }
 
-        private void predictNextMonth() {
-            DateTime nextPeriodDay = listBloodDay.Last() + (listBloodDay.Last() - listBloodDay[listBloodDay.Count - 2]);
-            listDangerDate.Add(getTuanNguyHiem(listBloodDay[listBloodDay.Count - 1], nextPeriodDay));
-        }
+        //private void predictNextMonth() {
+        //    DateTime nextPeriodDay = listBloodDay.Last() + (listBloodDay.Last() - listBloodDay[listBloodDay.Count - 2]);
+        //    listDangerDate.Add(getTuanNguyHiem(listBloodDay[listBloodDay.Count - 1], nextPeriodDay));
+        //}
     }
 }
