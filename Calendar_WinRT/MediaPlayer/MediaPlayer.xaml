@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Calendar_WinRT.MediaPlayer.MediaPlayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calendar_WinRT.MediaPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="AppBarButton"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="grBackGround">
+            <Grid x:Name="grBack03" HorizontalAlignment="Left" Height="370" Margin="686,87,0,0" VerticalAlignment="Top" Width="374">
+                <MediaElement x:Name="myMedia" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="374"/>
+            </Grid>
+            <Grid x:Name="grBack01" HorizontalAlignment="Left" Height="275" Margin="318,87,0,0" VerticalAlignment="Top" Width="368">
+                <TextBlock x:Name="txtNameMusic" HorizontalAlignment="Left" Margin="49,43,0,0" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <TextBlock x:Name="txtAtist" HorizontalAlignment="Left" Margin="49,107,0,0" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock x:Name="txtUrlSource" HorizontalAlignment="Left" Margin="49,150,0,0" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock x:Name="txtStt" HorizontalAlignment="Left" Margin="49,198,0,0" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            </Grid>
+            <Grid x:Name="grBack02" HorizontalAlignment="Left" Height="95" Margin="318,362,0,0" VerticalAlignment="Top" Width="368">
+                <AppBarButton x:Name="btnPrevious" HorizontalAlignment="Left" Margin="-12,11,0,-4" VerticalAlignment="Top" Icon="Previous"/>
+                <AppBarButton x:Name="btnPlay" HorizontalAlignment="Left" Margin="62,11,0,-4" VerticalAlignment="Top" Icon="Play"/>
+                <AppBarButton x:Name="btnPause" HorizontalAlignment="Left" Margin="134,11,0,-4" VerticalAlignment="Top" Icon="Pause"/>
+                <AppBarButton x:Name="btnNext" HorizontalAlignment="Left" Margin="207,11,0,-4" VerticalAlignment="Top" Icon="Next"/>
+                <AppBarButton x:Name="btnPrevew" HorizontalAlignment="Left" Margin="279,11,-11,-4" VerticalAlignment="Top" Icon="Preview"/>
+            </Grid>
+            <ListBox x:Name="lstItems" HorizontalAlignment="Left" Height="219" Margin="316,454,0,0" VerticalAlignment="Top" Width="746" DisplayMemberPath="Title" SelectionChanged="lstItems_SelectionChanged" />
+            <Button Content="Search" HorizontalAlignment="Left" Margin="983,675,0,0" VerticalAlignment="Top" Click="Search_Click"/>
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Margin="318,678,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433"/>
+            <ComboBox x:Name="cbSite" HorizontalAlignment="Left" Margin="756,678,0,0" VerticalAlignment="Top" Width="225"/>
+        </Grid>
+    </Grid>
+</Page>
